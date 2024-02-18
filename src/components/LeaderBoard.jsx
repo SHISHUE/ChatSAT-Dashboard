@@ -7,7 +7,7 @@ function LeaderBoard() {
       <div className='px-[1.5vw] py-[1.3vw] rounded lg:rounded-xl shadow-inner-2xl lg:text-[1.6vw] text-[#f8f8f8]'>
         Leaderboard
       </div>
-      <div className='overflow-y-auto flex flex-col h-[25vh]  lg:h-[14.5vw] scrollbar-thin scrollbar-thumb-[#495952] scrollbar-track-[#495952] scrollbar-thumb-rounded-full scrollbar-track-rounded-full '>
+      <div className='overflow-y-auto flex flex-col h-[25vh] md:h-[29vh]  lg:h-[14.5vw] scrollbar-thin scrollbar-thumb-[#495952] scrollbar-track-[#495952] scrollbar-thumb-rounded-full scrollbar-track-rounded-full '>
         <NameCard id={"01"} name={"Name"} active={false}/>
         <NameCard id={"02"} name={"Name"} active={false}/>
         <NameCard id={"03"} name={"You"} active={true}/>

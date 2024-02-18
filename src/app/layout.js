@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} >
-        <div className="flex w-full min-h-screen gap-x-[3vw] ">
+        <div className="flex w-full min-h-screen gap-x-[3vw] overflow-hidden">
           <SideBar />
 
           <div className="min-w-[calc{100vh-25vh}]">{children}</div>

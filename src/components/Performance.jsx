@@ -17,7 +17,7 @@ function Performance() {
           </h1>
         </div>
 
-        <button className="bg-[#7a8682] text-[2vw] lg:text-[1vw] p-1 rounded shadow-inner-2xl lg:rounded-xl lg:px-4 lg:py-2 border-[1px] hover:scale-[0.9] transition-all duration-200 border-[#5b6f5f] text-[#ecff87]">Take a Quiz</button>
+        <button className="bg-[#7a8682] text-[2vw] lg:text-[1vw] md:text-[16px] p-1 rounded shadow-inner-2xl lg:rounded-xl lg:px-4 lg:py-2 border-[1px] hover:scale-[0.9] transition-all duration-200 border-[#5b6f5f] text-[#ecff87]">Take a Quiz</button>
       </div>
     </div>
   );

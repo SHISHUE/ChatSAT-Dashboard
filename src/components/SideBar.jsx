@@ -10,7 +10,7 @@ function SideBar() {
   const [showNavbar, setShowNavbar] = useState(true);
 
   const handleResize = useCallback(() => {
-    if (window.innerWidth < 680) {
+    if (window.innerWidth < 1024) {
       setIsSmall(true);
     } else {
       setIsSmall(false);
@@ -29,16 +29,28 @@ function SideBar() {
   return (
     <>
       {showNavbar && (
-        <aside className="bg-[#364741] shadow-3xl w-[50%] lg:min-w-[25vw] lg:h-screen h-screen transition-all duration-200">
-          <div className="px-[2vw] py-[1vw] flex items-center lg:gap-x-2 gap-1">
-            <div className="lg:w-[1.8vw] w-[3vw] h-[3vw] lg:h-[1.8vw] aspect-square rounded-full bg-[#d9d8d9]"></div>
-            <h2 className="text-[#8d9794]  lg:text-[2vw] tracking-[-0.10em]">
+        <aside className="bg-[#364741] shadow-3xl absolute w-[55vw] z-40 md:w-[35vw] lg:w-[30vw] min-h-screen md:min-h-[100vh] lg:min-h-screen transition-all duration-200">
+          
+          <div className="px-[2vw] py-[1vw] flex items-center justify-between lg:gap-x-2 gap-1">
+           <div className="flex items-center gap-2">
+           <div className="lg:w-[1.8vw] w-[3vw] h-[3vw] lg:h-[1.8vw] aspect-square rounded-full bg-[#d9d8d9]"></div>
+            <h2 className="text-[#8d9794] lg:text-[2vw] tracking-[-0.10em]">
               Chat <span className="text-[#fffffd]">SAT</span>
             </h2>
+           </div>
+
+            {
+            isSmall && (<div
+              className="text-[#f8f8f8] text-[3.5vw] md:text-[18px] px-[3vw] py-[2vw] "
+              onClick={() => setShowNavbar(!showNavbar)}
+            >
+              <SlMenu />
+            </div>)
+          }
           </div>
 
-          <div className="mx-[2vw] rounded-xl py-2 bg-[#495952] shadow-inner-2xl border-[1px] border-[#5b6f5f]">
-            <h2 className="text-[#d6dad8] ml-3 text-[3.5vw]  lg:text-[1.5vw]">New Thread</h2>
+          <div className="mx-[2vw] rounded lg:rounded-xl py-2 bg-[#495952] shadow-inner-2xl border-[1px] border-[#5b6f5f]">
+            <h2 className="text-[#d6dad8] ml-3 text-[3.5vw] md:text-[16px] lg:text-[1.5vw]">New Thread</h2>
           </div>
 
           <div className="py-2">
@@ -67,7 +79,7 @@ function SideBar() {
 
       {isSmall && (
         <div
-          className="text-[#f8f8f8] text-[2vw] px-[2vw] py-[2vw]"
+          className="text-[#f8f8f8] md:text-[18px] text-[3.5vw] md:px-2  px-[2vw] py-[2vw] "
           onClick={() => setShowNavbar(!showNavbar)}
         >
           <SlMenu />
