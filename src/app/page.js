@@ -8,7 +8,7 @@ export default function Home() {
           Hey, <span className="text-[#edff86]">Name!</span>
         </h1>
         <h1 className="lg:text-[4vw] text-[5.4vw] w-full font-semibold text-[#f8f8f8] tracking-tight">
-          How's your prep for the{" "}
+         {` How's your prep for the `}
           <span className="text-[#edff86]">March SAT</span>
         </h1>
       </div>
